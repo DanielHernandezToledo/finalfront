@@ -1,0 +1,85 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.navbar{
+
+    width: 100vw;
+    height: 36rem;
+    background-color: v.$orange;
+    padding: 0rem 10rem;
+    border-bottom: 0.1rem solid v.$orange;
+      @include m.tablet{
+        margin-top:0;
+        background: transparent;
+        height: 96px;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        transition: 0.4s ease;
+        margin-bottom: 0;
+        &.active{
+            background-color: v.$orange;
+        }
+    }
+}
+    
+
+
+.navbar-content{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    a{
+        img{
+            height: 5rem;
+              @include m.tablet{
+                height:auto;
+            }
+        }
+    }
+
+    @include m.tablet{
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .principal-nav{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+          @include m.tablet{
+            margin-top: 0;
+            flex-direction: row;
+        }
+        a{
+            display: block;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: v.$white;
+            font-weight: 500;
+            text-decoration: none;
+
+            &:hover{
+                color: v.$grey7;
+
+            }
+            @include m.tablet{
+                display: inline-block;
+                margin-bottom: 0;
+                width: 7.5rem;
+                margin-left: 2.4rem;
+                height: 9.6rem;
+                padding-top: 7.1%;
+                &:hover{
+                    border-bottom: 0.3rem solid v.$orange;
+                }
+            }
+        }
+    }
+}

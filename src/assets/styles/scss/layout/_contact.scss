@@ -1,0 +1,128 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contact{
+    height: auto;
+      @include m.tablet{
+        height: 76.8rem;
+    }
+
+    
+    background: linear-gradient(
+        to right,
+        v.$grey5 0%,
+        v.$grey5 75%,
+        v.$grey4 75%,
+        v.$grey4 100%,
+    );
+}
+
+.contact-info{
+    height: 100%;
+      @include m.tablet{
+        @include m.grid(2, 10rem);
+        place-content: center;
+    }
+
+    .form-contact{
+    padding-top: 5rem;
+      @include m.tablet{
+        padding-top:auto;
+    }
+        .form-contact-data{
+            display: flex;
+            align-items: center;
+            border-bottom: solid .2rem v.$grey2;
+            margin-bottom: 3rem;
+              @include m.tablet{
+                border-color: v.$grey3;
+            }
+        }
+        h3{
+            text-align: center;
+            width: 100;
+            padding: 2.2rem 0;
+            margin-bottom: 7.5rem;
+            font-weight: 600;
+            span{
+                color: v.$orange;
+            }
+              @include m.tablet{
+                text-align:start;
+                width: 28rem;
+            }
+        }
+
+        label{
+            margin: 0 1rem 1rem 0;
+        }
+
+        input{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .button-submit{
+            color: #FFFFFF;
+            background-color: #E0752F;
+            border-radius: 2.5rem;
+            padding: 1.4rem 3.2rem;
+            font-family: "Roboto", sans-serif;
+            margin-bottom: 8rem;
+            font-weight: 500;
+            text-decoration: none;
+              @include m.tablet{
+                margin-bottom: 10rem;
+            }
+        }
+
+    }
+}
+
+
+.contact-image{
+    height: 0;
+    display: none;
+    @include m.tablet{
+        display: inline;
+        width:59rem;
+        height: 40rem;
+        position: relative;
+        img{
+          position: absolute;
+          top: 25%;
+        }
+    }
+}
+
+.error{
+    background-color: v.$red;
+    color: v.$white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+}
+.succes{
+    background-color: v.$green;
+    color: v.$white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+.sending{
+    background-color: v.$orange;
+    color: v.$white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}

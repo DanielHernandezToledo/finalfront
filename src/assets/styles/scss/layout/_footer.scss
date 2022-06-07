@@ -1,0 +1,16 @@
+@use '../base/variables' as v;
+
+.footer{
+    height: 10rem;
+    background-color: v.$black;
+    .footer-data{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4rem;
+        .copyright{
+            color: v.$white;
+            margin: 0;
+        }
+    }
+}

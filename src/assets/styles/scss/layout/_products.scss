@@ -1,0 +1,132 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.products{
+    position: relative;
+    height: 76.8rem;
+    background: linear-gradient(
+        to right,
+        v.$grey5 0%,
+        v.$grey5 75%,
+        v.$grey4 75%,
+        v.$grey4 1000%,
+    );
+    .productsData{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+          @include m.tablet{
+            height: 55.2rem;
+            width: 96.6rem;
+            background-color: white;
+        }
+    }
+}
+
+.productsContainer{
+    position: relative;
+    height: 40rem;
+    width: 100vw;
+      @include m.tablet{
+        height: 55.2rem;
+        width: 96.6rem;
+    }
+    align-items: center;
+    .products-info{
+        position: absolute;
+        top: 112%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30.4rem;
+        width: 100vw;
+        padding: 6.8rem 5rem 8.3rem 5rem;
+        background-color: v.$orange;
+          @include m.tablet{
+            top: 54%;
+            left: 52%;
+            transform:translate(0,0);
+            height: 30.4rem;
+            width: 47.1rem;
+        }
+        .info-top{
+            text-align: center;
+            font-family: v.$font-roboto;
+            font-weight: 500;
+            color: v.$white;
+              @include m.tablet{
+                text-align:start;
+            }
+        }
+        .info-down{
+            text-align: center;
+            font-family: v.$font-roboto;
+            font-weight: 400;
+            color: v.$white;
+              @include m.tablet{
+                text-align:start;
+            }
+        }
+        h3{
+        
+            text-align: center;
+            font-family: v.$font-poppins;
+            font-weight: 500;
+            color: v.$white;
+              @include m.tablet{
+                text-align:start;
+            }
+        }
+
+    }
+}
+
+.firstProduct{
+    background-image: url('./src/assets/img/section3-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.secondProduct{
+    background-image: url('./src/assets/img/section3-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.thirdProduct{
+    background-image: url('./src/assets/img/section3-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.carousel-inner{
+    &.inner-products{
+        height: 60rem;
+    }
+}
+
+.carousel-control-prev {
+	padding: 0;
+}
+
+.arrow{
+    position: absolute;
+    top:55rem;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    img{
+        height: 2rem;
+        width: 2rem;
+    }
+      @include m.tablet{
+        top: 54rem;
+        right: 5rem;
+        left: auto;
+        width: 5rem;
+
+    }
+}

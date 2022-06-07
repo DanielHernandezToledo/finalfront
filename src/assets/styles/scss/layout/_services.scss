@@ -1,0 +1,64 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+
+.services{
+    background-image: url('./src/assets/img/section4-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 76.8rem;
+      @include m.tablet{
+          background-size: auto;
+        background-position: 45% 100%;
+        background-position-x: right;
+    }
+    .accordion{
+        padding-top: 14.4rem;
+        margin-left: 5rem;
+         width: 70vw;
+           @include m.tablet{
+            width: 67rem;
+            margin-left: 17rem;
+         }
+    }
+}
+
+
+
+.accordion-button:not(.collapsed){
+    color: v.$orange;
+    background-color: v.$grey6;
+    outline: none;
+}
+
+.accordion-button:focus{
+    border-color: v.$grey3;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: url('./src/assets/img/Icon feather-chevron-down.svg');
+}
+
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url('./src/assets/img/Icon feather-chevron-down.svg');
+    transform: rotate(180deg);
+}
+
+.accordion-button{
+    height: 6.4rem;
+    color: v.$black;
+    background-color: v.$grey6;
+    border: solid .1rem v.$grey3;
+    p{
+        margin-bottom: 0;
+    }
+}
+
+.accordion-body{
+    background-color: v.$white;
+    border-left: solid .1rem v.$grey3;
+    border-right: solid .1rem v.$grey3;
+}

@@ -1,0 +1,49 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.about-order{
+
+}
+
+.about{
+    border-left: 3.6rem solid v.$orange;
+    margin: 14.4rem 0;
+      @include m.tablet{
+        margin: 81.6rem 0 14.4rem 0;
+        height: auto;
+    }
+}
+
+.aboutData{
+    padding: 2rem;
+      @include m.tablet{
+        padding: 0;
+    }
+    h2{
+        margin-bottom: 2.2rem;
+        padding: 2.2rem 0;
+        font-weight: 600;
+        span{
+            color: v.$orange;
+        }
+          @include m.tablet{
+            width: 40rem;
+            margin-bottom: 4.4rem;
+        }
+    }
+      @include m.tablet{
+        margin-left: 30rem;
+    h2{
+        width: 40rem;
+        padding: 2.2rem 0;
+        margin-bottom: 4.4rem;
+
+    }
+    p{
+        width: 76.8rem;
+        padding-bottom: 2.2rem;
+        font-weight: 400;
+    }
+    
+}
+}

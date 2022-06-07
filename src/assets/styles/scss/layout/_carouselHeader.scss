@@ -1,0 +1,106 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.header{
+    height: 76.8rem;
+      @include m.tablet{
+        margin-top: -9.6rem;
+        position: absolute;
+        order: 0;
+    }
+
+}
+
+.headerBlock{
+    display: block;
+    width: 100vw;
+    height: 76.8rem;
+}
+
+.carousel-item{
+    height: 76.8rem; 
+}
+
+.firstHeader{
+    background-image:url(./src/assets/img/slider-1.png);
+    background-position:60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+      @include m.tablet{
+        background-position: center;       
+    }
+}
+.secondHeader{
+    background-image:url(./src/assets/img/contact-image.png);
+    background-position: 60%;    background-size: cover;
+    background-repeat: no-repeat;
+    @include m.tablet{
+        background-position: center;
+    }
+}
+.thirdHeader{
+    background-image:url(./src/assets/img/slider-1.png);
+    background-position: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include m.tablet{
+        background-position: center;
+    }
+}
+
+.carousel-indicators{
+    justify-content:space-evenly;
+      @include m.tablet{
+        justify-content: start;
+        top: 58.4rem;
+    }
+}
+
+.carousel-indicators [data-bs-target]{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: v.$grey3;
+    &:hover{
+        cursor: pointer;
+    }
+      @include m.tablet{
+        height: 8px;
+        width: 8px;
+    }
+}
+
+
+
+.carousel-indicators>.active{
+    background-color: v.$orange;
+}
+
+.header-info{
+    h1{
+        color: v.$white;
+        padding-top: 26.2rem;
+        margin: 0 0 3rem 0;
+        font-weight: 600;
+    }
+
+    p{
+        color: v.$white;
+        margin-bottom: 5.3rem;
+        font-weight: 500;
+    }
+
+    
+    a{
+        color: v.$white;
+        background-color: v.$orange;
+        border-radius: 2.5rem;
+        padding: 1.4rem 3.2rem;
+        font-family: v.$font-roboto;
+        margin-bottom: 24rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    
+}
